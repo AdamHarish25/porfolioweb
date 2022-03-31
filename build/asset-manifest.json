@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c38a551.css",
+    "main.js": "/static/js/main.c761d4bc.js",
+    "static/media/Desk2.jpg": "/static/media/Desk2.19052adaafdb974cc800.jpg",
+    "static/media/Desk.jpg": "/static/media/Desk.117ec6ae9c40a4925908.jpg",
+    "static/media/LogoIsmi.png": "/static/media/LogoIsmi.6e6903a7a9ff20777a65.png",
+    "static/media/IslamicThingsLogoTr.png": "/static/media/IslamicThingsLogoTr.53760054f681ae9eea7e.png",
+    "static/media/LogoBW2.png": "/static/media/LogoBW2.4afa9f798947fa71924e.png",
+    "static/media/Logo2.png": "/static/media/Logo2.64cee73920985cff69f1.png",
+    "static/media/Logo.png": "/static/media/Logo.1bbea70f21f9813e1098.png",
+    "index.html": "/index.html",
+    "main.7c38a551.css.map": "/static/css/main.7c38a551.css.map",
+    "main.c761d4bc.js.map": "/static/js/main.c761d4bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c38a551.css",
+    "static/js/main.c761d4bc.js"
+  ]
+}
