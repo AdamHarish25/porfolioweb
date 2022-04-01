@@ -23,7 +23,7 @@ function buttonToUp() {
             <FontAwesomeIcon icon={faArrowUp}/>
         </a>
         <div id="tooltip-top" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Go back up <FontAwesomeIcon icon={faArrowUp} className="ml-2"/>
+    Go up <FontAwesomeIcon icon={faArrowUp} className="ml-2"/>
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
         </>
