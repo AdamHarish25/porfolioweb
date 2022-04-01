@@ -1,0 +1,11 @@
+.Bg-img{
+    background-image: url(../images/Desk.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
