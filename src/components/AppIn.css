@@ -9,3 +9,7 @@ html, body{
     overflow-x: hidden;
 }
 
+.grid-cols{
+    overflow-x: hidden !important;
+}
+

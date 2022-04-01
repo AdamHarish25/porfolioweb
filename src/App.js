@@ -34,9 +34,11 @@ function App() {
     )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        window.location.reload(true);
       })
       .catch((err) => {
         console.log("FAILED...", err);
+        window.location.reload(false);
       });
   };
 
@@ -54,12 +56,16 @@ function App() {
             alt=""
           />
 
-          <h1 className="text-center font-bold font-Poppins absolute xs:top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4">
-            Hi I'm Adam. I design & build Websites and Mobile apps
+          <div className="absolute xs:top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 w-full h-fit px-5">
+          <h1 className="text-center font-bold font-Poppins ">
+            Hi I'm Adam. I design & build Websites <br className="hidden md:block"/> and Mobile apps
           </h1>
-          <h5 className="font-Rubik font-normal xs:text-base md:text-xl absolute xs:top-3/4 left-2/4 -translate-y-1/4 -translate-x-2/4">
+          </div>
+          <div className="absolute xs:top-3/4 left-2/4 -translate-y-1/4 -translate-x-2/4 w-full h-fit">
+          <h5 className="font-Rubik text-center font-normal xs:text-sm lg:text-xl">
             Scroll down to see what I do
           </h5>
+          </div>
           <div className="w-full h-fit mt-14 absolute xs:top-3/4 left-2/4 -translate-y-1/4 -translate-x-2/4 flex justify-center">
             <a href="#AboutSect" className="text-base animate-bounce">
               <FontAwesomeIcon icon={faAnglesDown} />
@@ -68,7 +74,7 @@ function App() {
         </div>
       </section>
       <section id="AboutSect">
-        <div className="w-screen h-auto p-20 my-10">
+        <div className="w-screen h-auto p-8 my-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
             <div className="w-full h-fit p-1 mt-5">
               <h3 className="text-black font-Poppins text-2xl 2xl:text-3xl">
@@ -261,12 +267,13 @@ function App() {
           <form onSubmit={onSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-5">
             <input
-              className="rounded-md border-none w-full "
+              className="rounded-md border-none w-full"
               type="text"
               name="from_name"
               placeholder="Subject's name"
               value={toSend.from_name}
               onChange={handleChange}
+              required
             />
             <input
             className="rounded-md border-none w-full"
@@ -275,6 +282,7 @@ function App() {
               placeholder="Object's name"
               value={toSend.to_name}
               onChange={handleChange}
+              required
             />
             </div>
             <br/>
@@ -286,15 +294,17 @@ function App() {
               placeholder="Your message"
               value={toSend.message}
               onChange={handleChange}
+              required
             />
             <br/>
             <input
             className="rounded-md border-none"
-              type="text"
+              type="email"
               name="reply_to"
               placeholder="Your email"
               value={toSend.reply_to}
               onChange={handleChange}
+              required
             />
             </div>
             <br/>
@@ -346,7 +356,7 @@ function App() {
 </ul>
 </div>
 <div>
-<h2 className="mb-6 text-sm font-semibold font-Poppins text-gray-900 uppercase dark:text-white">Follow us</h2>
+<h2 className="mb-6 text-sm font-semibold font-Poppins text-gray-900 uppercase dark:text-white">Follow me</h2>
 <ul className="text-gray-600 dark:text-gray-400">
 <li className="mb-4">
 <a href="https://instagram.com/adam_harits225" className="hover:underline ">Instagram</a>
