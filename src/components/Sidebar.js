@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -61,10 +62,8 @@ export default function Sidebar() {
               isOpen ? "translate-x-0" : "translate-x-full"
             } duration-300 ease-in-out`}
           >
-            <a href="#HomeSect" onClick={() => setIsOpen(!isOpen)}>
-              <h3
-                className={`text-xl text-pink-400 transform duration-200`}
-              >
+            <a href="#" onClick={() => setIsOpen(!isOpen)}>
+              <h3 className={`text-xl text-pink-400 transform duration-200`}>
                 Home
               </h3>
             </a>
@@ -90,11 +89,6 @@ export default function Sidebar() {
               </h3>
             </a>
           </aside>
-          {/* <aside className={`inset-y-0 right-0 fixed bg-blue-500 p-10 w-72 xs:translate-x-full ${isOpen2 ? 'lg:translate-x-0' : 'translate-x-full'} duration-300 ease-in-out`}>
-        <h3 className='text-xl text-white'>
-            Sidebar
-        </h3>
-    </aside> */}
         </header>
       </div>
     </>
