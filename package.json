@@ -1,7 +1,7 @@
 {
   "name": "my_portfolio",
   "version": "0.2.0",
-  "homepage":"http://adhamfrontweb.com/",
+  "homepage": "http://adhamfrontweb.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
