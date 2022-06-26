@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import ButtonUp from "./components/buttonGoUp";
+import HelpButton from "./components/HelpButton";
 import "./components/AppIn.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -441,6 +442,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <HelpButton />
       <Sidebar />
       <ButtonUp />
     </div>
