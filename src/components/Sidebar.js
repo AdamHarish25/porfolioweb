@@ -10,27 +10,42 @@ export default function Sidebar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  // const [isOpen2, setIsOpen2] = useState(false);
   const [colorChange, setColorChange] = useState(false);
-  // var main = document.getElementById("#MainSect");
   const changeTextColor = () => {
-    if (window.scrollY >= 700) {
+    if (window.scrollY >= 600) {
       setColorChange(true);
     } else {
       setColorChange(false);
     }
   };
   window.addEventListener("scroll", changeTextColor);
-  // const Opened = () => {
-  //     if (window.scrollY >= 600){
-  //         setIsOpen2(true);
-  //         setIsOpen(false);
-  //     }else{
-  //         setIsOpen2(false);
-  //         setIsOpen(false);
-  //     }
-  // };
-  // window.addEventListener('scroll', Opened);
+
+  var active1, active2, active3, active4;
+
+  var winHash = window.location.hash;
+
+  if (winHash === "") {
+    active1 = "text-pink-400";
+    active2 = "text-black";
+    active3 = "text-black";
+    active4 = "text-black";
+  } else if (winHash === "#AboutSect") {
+    active1 = "text-black";
+    active2 = "text-pink-400";
+    active3 = "text-black";
+    active4 = "text-black";
+  } else if (winHash === "#WorksSect") {
+    active1 = "text-black";
+    active2 = "text-black";
+    active3 = "text-pink-400";
+    active4 = "text-black";
+  } else if (winHash === "#ContactSect") {
+    active1 = "text-black";
+    active2 = "text-black";
+    active3 = "text-black";
+    active4 = "text-pink-400";
+  }
+
   return (
     <>
       <div>
@@ -39,7 +54,7 @@ export default function Sidebar() {
             colorChange ? "text-black bg-white" : "text-white"
           }`}
         >
-          <a href="#HomeSect">
+          <a href="#">
             <h1 className="font-Rubik text-2xl py-2 transform">Adham</h1>
           </a>
           {!isOpen ? (
@@ -62,28 +77,50 @@ export default function Sidebar() {
               isOpen ? "translate-x-0" : "translate-x-full"
             } duration-300 ease-in-out`}
           >
-            <a href="#" onClick={() => setIsOpen(!isOpen)}>
-              <h3 className={`text-xl text-pink-400 transform duration-200`}>
+            <a
+              href="#"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              <h3
+                className={`text-xl hover:text-pink-400 transform duration-200 ${active1}`}
+              >
                 Home
               </h3>
             </a>
-            <a href="#AboutSect" onClick={() => setIsOpen(!isOpen)}>
+            <a
+              href="#AboutSect"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <h3
-                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 text-black`}
+                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 ${active2}`}
               >
                 About
               </h3>
             </a>
-            <a href="#WorksSect" onClick={() => setIsOpen(!isOpen)}>
+            <a
+              href="#WorksSect"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <h3
-                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 text-black`}
+                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 ${active3}`}
               >
                 My Works
               </h3>
             </a>
-            <a href="#ContactSect" onClick={() => setIsOpen(!isOpen)}>
+            <a
+              href="#ContactSect"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <h3
-                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 text-black`}
+                className={`text-xl hover:text-pink-400 mt-5 transform duration-200 ${active4}`}
               >
                 Contact me
               </h3>
